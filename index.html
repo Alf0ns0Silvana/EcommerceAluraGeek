@@ -1,17 +1,29 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="Imgs/fav.png">
     <title>Alura Geek</title>
 </head>
+
 <body>
-    
+
     <header class="header">
         <div class="contenedor_header">
             <img src="Imgs/Logo.png" alt="Logo AluraGeek">
-            <input type="text" class="search" placeholder="¿Qué desea buscar?">
+            <div class="buscador">
+                <input type="text" class="search" placeholder="¿Qué desea buscar?">
+                <i class="fas fa-search" class="icon_search"></i>
+            </div>
         </div>
         <button class="login_btn">Login</button>
     </header>
@@ -19,7 +31,7 @@
         <img src="Imgs/banner.jpg" alt="Banner gamer">
         <div class="contenedor_banner">
             <h1 class="banner_tittle">Febrero promocional</h1>
-            <span class="banner_subtittle">Productos seleccionados son 30% de descuento</span>
+            <span class="banner_subtittle">Productos seleccionados son 35% de descuento</span>
             <button class="banner_btn">Ver promociones</button>
         </div>
     </section>
@@ -27,49 +39,52 @@
         <section class="section">
             <div class="section_tittle">
                 <h2>Star wars</h2>
-                <a href="#">Ver todo</a>
+                <a href="#">Ver todo 🡢</a>
             </div>
             <div class="section_products">
             </div>
         </section>
         <section class="section">
             <div class="section_tittle">
-                <h2>Star wars</h2>
-                <a href="#">Ver todo</a>
+                <h2>Consolas</h2>
+                <a href="#">Ver todo 🡢</a>
             </div>
             <div class="section_products">
             </div>
         </section>
         <section class="section">
             <div class="section_tittle">
-                <h2>Star wars</h2>
-                <a href="#">Ver todo</a>
+                <h2>Diversos</h2>
+                <a href="#">Ver todo 🡢</a>
             </div>
             <div class="section_products">
             </div>
         </section>
     </main>
-    
+
     <footer>
         <div class="footer">
             <img src="Imgs/Logo.png" alt="Logo AluraGeek">
             <div class="links">
-                <a href="#">Quienes somos</a>
-                <a href="#">Políticas de privacidad</a>
-                <a href="#">Programa de fidelidad</a>
-                <a href="#">Nuestras tiendas</a>
-                <a href="#">Quiero ser franquiciado</a>
-                <a href="#">Anuncie aquí</a>
+                <ul>
+                    <li><a href="#">Quienes somos</a></li>
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Programa de fidelidad</a></li>
+                    <li><a href="#">Nuestras tiendas</a></li>
+                    <li><a href="#">Quiero ser franquiciado</a></li>
+                    <li><a href="#">Anuncie aquí</a></li>
+                </ul>
             </div>
-        <form class="form_consultas">
-            <span class="span_consultas">Hable con nosotros</span>
-            <input type="text" placeholder="Nombre">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Escriba su consulta"></textarea>
-            <button class="form_btn">Enviar mensaje</button>
-        </form>
+            <form class="form_consultas">
+                <span class="span_consultas">Hable con nosotros</span>
+                <input type="text" placeholder="Nombre">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Escriba su consulta"></textarea>
+                <button class="form_btn">Enviar mensaje</button>
+            </form>
         </div>
     </footer>
     <span class="rodapie">Desarrollado por Silvana A - 2023 </span>
 
 </body>
+
 </html>
