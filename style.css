@@ -98,9 +98,7 @@ main{
 }
 section{
     margin-bottom: 20px;
-    height: 250px;
-
-}   
+}
 .section_tittle{
     display: flex;
     justify-content: space-between;
@@ -117,6 +115,51 @@ section{
 .section_products{
     height: 220px;
 }
+
+.product_list{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.producto{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    height: 250px;
+    width: 176px;
+}
+.img_producto{
+    width: 176px;
+    height: 170px;
+}
+.title_producto{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16.44px;
+    color: #464646;
+    height: 16px;
+}
+.precio_producto{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.78px;
+    color: #464646;
+    height: 19px;
+}
+.link_detalles_producto{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.78px;
+    color: #2A7AE4;
+    height: 19px;
+    width: 100px;
+}
+
 
 
                                         /* Footer */
@@ -201,5 +244,3 @@ section{
     padding: 20px;
     font-size: 1.15rem;
 }
-
-/* importar metas OG,y arrancar con objetos*/

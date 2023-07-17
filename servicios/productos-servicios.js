@@ -1,7 +1,7 @@
 // GET 
 
 const listaProductos = () => { // crea var funcion para traer
-    fetch("http://localhost:3000/producto") // la informacion mediante fetch y
+   return fetch("http://localhost:3000/producto") // la informacion mediante fetch y
     .then(respuesta => respuesta.json()) // cuando recibamos la respuesta (con .then) la transformamos a json.
     .catch(error => console.log(error)) // crear error en caso de que respuesta sea error
 }

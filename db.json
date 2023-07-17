@@ -2,28 +2,28 @@
     "producto":[
         {
             "name": "Alura",
-            "imageUrl": "",
+            "imageUrl": "./Imgs/img-muestra.png",
             "price": "23",
             "id": 1
         },
         {
             "name": "Alura",
-            "imageUrl": "",
+            "imageUrl":  "./Imgs/img-muestra.png",
             "price": "23",
             "id": 1
         },        {
             "name": "Alura",
-            "imageUrl": "",
+            "imageUrl":  "./Imgs/img-muestra.png",
             "price": "23",
             "id": 1
         },        {
             "name": "Alura",
-            "imageUrl": "",
+            "imageUrl":  "./Imgs/img-muestra.png",
             "price": "23",
             "id": 1
         },        {
             "name": "Alura",
-            "imageUrl": "",
+            "imageUrl": "./Imgs/img-muestra.png",
             "price": "23",
             "id": 1
         }
