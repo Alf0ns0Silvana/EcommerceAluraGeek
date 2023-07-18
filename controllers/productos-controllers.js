@@ -18,14 +18,32 @@ const nuevoProducto = (name,imageUrl,price, id) => { // creo Var q recibe atribu
 }
  // Traer referencia data-product
 const productos = document.querySelector("[data-product]")
+
 // Crear funcion para mostrar elementos en pantalla 
 
 productosServicios.listaProductos()
   .then(data => {
-    data.forEach(producto => {
-      const { name, imageUrl, price, id } = producto;
-      const card = nuevoProducto(name, imageUrl, price, id);
-      productos.appendChild(card);
+    const sections = document.querySelectorAll('.section_product');
+    const productosPorSeccion = Math.ceil(data.length / sections.length);
+    sections.forEach((section, index) => {
+      const productosSeccion = data.slice(index*productosPorSeccion,(index+1)*productosPorSeccion);
+      productosSeccion.forEach(producto => {
+        const { name, imageUrl, price, id } = producto;
+        const card = nuevoProducto(name, imageUrl, price, id);
+        section.appendChild(card);
+      });
     });
   })
   .catch(error => console.log(error));
+
+/* consolas */
+const verConsolasBtn = document.getElementById("verConsolasBtn");
+const starWarsSection = document.getElementById("star_wars");
+const diversosSection = document.getElementById("diversos");
+const consolasSection = document.getElementById("consolas");
+
+verConsolasBtn.addEventListener("click", () => {
+  starWarsSection.style.display = "none";
+  diversosSection.style.display = "none";
+  consolasSection.style.display = "block";
+});

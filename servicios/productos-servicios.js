@@ -10,3 +10,4 @@ const listaProductos = () => { // crea var funcion para traer
 export const productosServicios = {
     listaProductos
 }
+

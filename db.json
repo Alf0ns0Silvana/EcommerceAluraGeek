@@ -1,31 +1,85 @@
 {
     "producto":[
         {
-            "name": "Alura",
+            "name": "Producto 1",
             "imageUrl": "./Imgs/img-muestra.png",
-            "price": "23",
+            "price": "120",
             "id": 1
         },
         {
-            "name": "Alura",
+            "name": "Producto 2",
             "imageUrl":  "./Imgs/img-muestra.png",
-            "price": "23",
-            "id": 1
+            "price": "423",
+            "id": 2
         },        {
-            "name": "Alura",
+            "name": "Producto 3",
             "imageUrl":  "./Imgs/img-muestra.png",
-            "price": "23",
-            "id": 1
+            "price": "253",
+            "id": 3
         },        {
-            "name": "Alura",
+            "name": "Producto 4",
             "imageUrl":  "./Imgs/img-muestra.png",
-            "price": "23",
-            "id": 1
+            "price": "263",
+            "id": 4
         },        {
-            "name": "Alura",
+            "name": "Producto 5",
             "imageUrl": "./Imgs/img-muestra.png",
-            "price": "23",
-            "id": 1
+            "price": "93",
+            "id": 5
+        },
+        {
+            "name": "Consola 6",
+            "imageUrl": "./Imgs/img-muestra.png",
+            "price": "568",
+            "id": 6
+        },
+        {
+            "name": "Consola 7",
+            "imageUrl":  "./Imgs/img-muestra.png",
+            "price": "627",
+            "id": 7
+        },        {
+            "name": "Consola 8",
+            "imageUrl":  "./Imgs/img-muestra.png",
+            "price": "147",
+            "id": 8
+        },        {
+            "name": "Consola 9",
+            "imageUrl":  "./Imgs/img-muestra.png",
+            "price": "036",
+            "id": 9
+        },        {
+            "name": "Consola 10",
+            "imageUrl": "./Imgs/img-muestra.png",
+            "price": "987",
+            "id": 10
+        },
+        {
+            "name": "Producto 11",
+            "imageUrl": "./Imgs/img-muestra.png",
+            "price": "789",
+            "id": 11
+        },
+        {
+            "name": "Producto 12",
+            "imageUrl":  "./Imgs/img-muestra.png",
+            "price": "598",
+            "id": 12
+        },        {
+            "name": "Producto 13",
+            "imageUrl":  "./Imgs/img-muestra.png",
+            "price": "357",
+            "id": 13
+        },        {
+            "name": "Producto 14",
+            "imageUrl":  "./Imgs/img-muestra.png",
+            "price": "255",
+            "id": 14
+        },        {
+            "name": "Producto 15",
+            "imageUrl": "./Imgs/img-muestra.png",
+            "price": "481",
+            "id": 15
         }
     ]
 }

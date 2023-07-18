@@ -12,12 +12,9 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="Imgs/fav.png">
-    <title>Alura Geek</title>
-</head>
-
-<body> 
+    <title>Home Admin</title>
+</head><body> 
     <header class="header">
-        <a href="index.html" class="bnt_atras">↩</a>
         <div class="contenedor_header">
             <img src="Imgs/Logo.png" alt="Logo AluraGeek">
             <div class="buscador">
@@ -25,45 +22,15 @@
                 <i class="fas fa-search" class="icon_search"></i>
             </div>
         </div>
-        <button class="login_btn"><a href="login.html">Login</a></button>
     </header>
-    <section class="banner">
-        <img src="Imgs/banner.jpg" alt="Banner gamer">
-        <div class="contenedor_banner">
-            <h1 class="banner_tittle">Febrero promocional</h1>
-            <span class="banner_subtittle">Productos seleccionados son 35% de descuento</span>
-            <a class="banner_btn" id="verConsolasBtn">Ver consolas</a>
-        </div>
-    </section>
 
-    <main class="main">
-        <section class="section" id="star_wars">
-            <div class="section_tittle">
-                <h2>Star wars</h2>
-                <a href="#">Ver todo 🡢</a>
-            </div>
-            <div class="section_product">
-                <div class="product_list" data-product><!-- data product lo utilizamos como referencia p/crear el html template en productos-controllers --></div>
-            </div>
-        </section>
-        <section class="section" id="consolas">
-            <div class="section_tittle">
-                <h2>Consolas</h2>
-                <a href="#">Ver todo 🡢</a>
-            </div>
-            <div class="section_product">
-                <div class="product_list" data-product></div>
-            </div>
-        </section>
-        <section class="section" id="diversos">
-            <div class="section_tittle">
-                <h2>Diversos</h2>
-                <a href="#">Ver todo 🡢</a>
-            </div>
-            <div class="section_product">
-                <div class="product_list" data-product></div>
-            </div>
-        </section>
+    <main class="main_admin">
+        <form action="" class="form_admin">
+            <h1 class="title_form_admin">Iniciar sesión</h1>
+            <input type="email" placeholder="Escriba su email">
+            <input type="password" placeholder="Escriba su contraseña">
+            <button class="btn_sign_in"><a href="#">Entrar</a></button>
+        </form>
     </main>
 
     <footer>

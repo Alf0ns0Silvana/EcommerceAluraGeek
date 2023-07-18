@@ -12,8 +12,24 @@ header{
     margin-top: 25px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+.bnt_atras{
+    text-align: center;
+    width: 25px;
+    margin-top: 13px;
+    text-decoration: none;
+    height: 25px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #2A7AE4;
+    background-color: #2A7AE4;
+    border-radius: 50%;
+    opacity: 0.9
 }
 .contenedor_header{
+    width: 601px;
+    gap: 32px;
     display: flex;
     align-items: center;
 }
@@ -41,14 +57,25 @@ header{
     transform: translateX(-170%);
     font-size: 14px;
 }
-.login_btn{
-    color: #2A7AE4;
+.login_btn {
+    height: 51px;
+    width: 182px;
     background-color: transparent;
     border: 1px solid #2A7AE4;
-    padding: 2px 50px;
     cursor: pointer;
     font-weight: 400;
-    font-size: 16px;
+    transition: background-color 0.5s linear 0s;
+}
+.login_btn:hover {
+    background-color: #2A7AE4;
+    opacity: 0.7;
+} 
+.login_btn:hover > a {
+    color: white;
+}
+.login_btn > a {
+    text-decoration: none;
+    color: #2A7AE4;
 }
 .banner{
     opacity: 0.9;
@@ -67,6 +94,8 @@ header{
     color: #fff;
 }
 .banner_btn{
+    text-decoration: none;
+    width: 129px;
     color: #fff;
     background-color: #2A7AE4;
     border: 1px solid #2A7AE4;
@@ -95,9 +124,13 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 section{
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .section_tittle{
     display: flex;
@@ -109,20 +142,16 @@ section{
     color: #464646;
 }
 .section_tittle a{
+    display: flex;
+    justify-content: space-around;
     font-size: 14px;
     color: #2A7AE4;
 }
-.section_products{
-    height: 220px;
-}
-
-.product_list{
-    margin-top: 10px;
+.section_product{
+    width: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
 }
 .producto{
     margin-top: 10px;
@@ -131,7 +160,19 @@ section{
     align-items: flex-start;
     gap: 8px;
     height: 250px;
-    width: 176px;
+    width: 185px;
+    animation: dissolve 6s ease-out 3s infinite normal forwards;
+}
+@keyframes dissolve {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+	25%,
+	75% {
+		opacity: 0.5;
+	}
 }
 .img_producto{
     width: 176px;
@@ -157,10 +198,51 @@ section{
     line-height: 18.78px;
     color: #2A7AE4;
     height: 19px;
-    width: 100px;
+    width: 100px; 
 }
 
+                                        /* Main admin */
 
+.main_admin{
+    width: 100%;
+    background-color: #F5F5F5;
+}
+.form_admin{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 310px;
+    gap: 17px;
+}
+.title_form_admin{
+    color: #464646;
+    font-size: 18px;
+    font-weight: 700;
+}
+.form_admin>input{
+    width: 423px;
+    height: 63px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(161,161,161,0.4);
+    -moz-box-shadow: 0px 1px 1px 0px rgba(161,161,161,0.4);
+    box-shadow: 0px 1px 1px 0px rgba(161,161,161,0.4);
+}
+.btn_sign_in{
+    width: 423px;
+    height: 62px;
+    background-color:#2A7AE4;
+    color: #fff;
+    padding: 12px 16px;
+    border: 1px solid #2A7AE4;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 18.78px;
+    font-weight: 400;
+}
 
                                         /* Footer */
 
