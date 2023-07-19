@@ -13,7 +13,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="Imgs/fav.png">
     <title>Home Admin</title>
-</head><body> 
+</head>
+
+<body> 
     <header class="header">
         <div class="contenedor_header_admin">
             <img src="Imgs/Logo.png" alt="Logo AluraGeek">
@@ -25,11 +27,11 @@
     </header>
 
     <main class="main_admin">
-        <form action="" class="form_admin">
+        <form class="form_admin">
             <h1 class="title_form_admin">Iniciar sesión</h1>
-            <input type="email" placeholder="Escriba su email">
-            <input type="password" placeholder="Escriba su contraseña">
-            <button class="btn_sign_in"><a href="#">Entrar</a></button> <!-- debe ir a productos junto con los botones "ver todo" en cada section del inicio-->
+            <input type="email" id="email" name="email" placeholder="Escriba su correo electrónico">
+            <input type="password" id="password" name="password" placeholder="Escriba su contraseña">
+            <button type="submit" class="btn_sign_in">Entrar</button>
         </form>
     </main>
 
@@ -48,14 +50,16 @@
             </div>
             <form class="form_consultas">
                 <span class="span_consultas">Hable con nosotros</span>
-                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Nombre" >
                 <textarea name="" id="" cols="30" rows="10" placeholder="Escriba su consulta"></textarea>
                 <button class="form_btn">Enviar mensaje</button>
+                <span class="success-message" style="display: none;">Mensaje eviado!</span>
             </form>
         </div>
     </footer>
+
     <span class="rodapie">Desarrollado por Silvana A - 2023 </span>
-    
+    <button id="verConsolasBtn" style="display: none;"></button>
     <script src="controllers/productos-controllers.js" type="module"></script>
 
 </body>
