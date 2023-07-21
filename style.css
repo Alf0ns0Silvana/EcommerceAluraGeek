@@ -255,6 +255,14 @@ section{
     text-decoration: none;
     background-color: transparent;
 }
+
+#fail{
+    color: red;
+    font-size: 15px;
+}
+
+
+                                        /* Messajes formulario de consulta */
 .error-message {
     color: red;
     font-size: 13px;

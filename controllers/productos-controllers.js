@@ -17,7 +17,8 @@ const nuevoProducto = (name,imageUrl,price, id) => {
 const productos = document.querySelector("[data-product]")
 
 productosServicios.listaProductos()
-  .then(data => {
+  .then(data => { 
+    console.log(data)
     const sections = document.querySelectorAll('.section_product');
     const productosPorSeccion = Math.ceil(data.length / sections.length);
     sections.forEach((section, index) => {
@@ -117,3 +118,49 @@ function showSuccess(element) {
     element.style.display = 'none';
   }, 10000);
 }
+
+/* validar form inicio sesion */
+
+let user = document.getElementById('usuario');
+let pass = document.getElementById('password');
+let failLogin = document.getElementById('fail');
+
+const validUsers = [
+    { email: 'user@gmail.com', password: '123456' }
+  ];
+  function authenticateUser(email, password) {
+    return validUsers.some(user => user.email === email && user.password === password);
+  }
+  
+var form = document.getElementById('form_admin');
+form.addEventListener('submit', async function(evt) {
+    evt.preventDefault();
+    console.log('funciona');
+    let msjFail = [];
+
+    const email = user.value.trim();
+    const password = pass.value.trim();
+    if (!email) {
+      msjFail.push('Ingresa tu email');
+    }
+    if (!password) {
+      msjFail.push('Ingresa tu password.');
+    }
+    failLogin.innerHTML = msjFail.join('. ');
+    if (msjFail.length === 0) {
+      const authenticated = authenticateUser(email, password);
+        if (authenticated) {
+            try {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            window.location.href = 'index.html';
+            } catch (error) {
+            console.error('Error en la autenticación:', error);
+            }
+        } else {
+            failLogin.textContent = 'Incorrecto. Por favor, verifica tu correo electrónico y contraseña.';
+        } 
+      setTimeout(() => {
+        failLogin.innerHTML = '';
+      }, 5000);
+    }
+});

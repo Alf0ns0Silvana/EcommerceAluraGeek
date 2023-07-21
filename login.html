@@ -27,11 +27,12 @@
     </header>
 
     <main class="main_admin">
-        <form class="form_admin">
+        <form action="http://localhost:3000/login" class="form_admin" id="form_admin">
             <h1 class="title_form_admin">Iniciar sesión</h1>
-            <input type="email" id="email" name="email" placeholder="Escriba su correo electrónico">
+            <input type="email" id="usuario" name="usuario" placeholder="Escriba su correo electrónico">
             <input type="password" id="password" name="password" placeholder="Escriba su contraseña">
-            <button type="submit" class="btn_sign_in">Entrar</button>
+            <input type="submit" class="btn_sign_in" value="Entrar" id="login_btn">
+            <span id="fail"></span>
         </form>
     </main>
 
