@@ -12,54 +12,26 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="Imgs/fav.png">
-    <title>Home - Alura Geek</title>
+    <title>Todo - Alura Geek</title>
 </head>
 
 <body> 
     <header class="header">
-        <div class="contenedor_header">
+        <div class="contenedor_header_all">
             <img src="Imgs/Logo.png" alt="Logo AluraGeek">
             <div class="buscador">
                 <input type="text" class="search" placeholder="¿Qué desea buscar?">
                 <i class="fas fa-search" class="icon_search"></i>
             </div>
         </div>
-        <button class="login_btn"><a href="login.html">Login</a></button>
     </header>
-    <section class="banner">
-        <img src="Imgs/banner.jpg" alt="Banner gamer">
-        <div class="contenedor_banner">
-            <h1 class="banner_tittle">Febrero promocional</h1>
-            <span class="banner_subtittle">Productos seleccionados son 35% de descuento</span>
-            <a class="banner_btn" id="verConsolasBtn">Ver consolas</a>
-        </div>
-    </section>
-
-    <main class="main">
+    <main class="main_admin">
         <section class="section" id="star_wars">
             <div class="section_tittle">
-                <h2>Star wars</h2>
-                <a href="#">Ver todo 🡢</a>
+                <h2>Todos los productos</h2>
+                <button class="form_btn"><a href="add_products.html">Agregar producto</a></button>
             </div>
-            <div class="section_product">
-                <div class="product_list" data-product></div>
-            </div>
-        </section>
-        <section class="section" id="consolas">
-            <div class="section_tittle">
-                <h2>Consolas</h2>
-                <a href="#">Ver todo 🡢</a>
-            </div>
-            <div class="section_product">
-                <div class="product_list" data-product></div>
-            </div>
-        </section>
-        <section class="section" id="diversos">
-            <div class="section_tittle">
-                <h2>Diversos</h2>
-                <a href="#">Ver todo 🡢</a>
-            </div>
-            <div class="section_product">
+            <div class="section_product"> <!-- Agregar iconos edit&delete -->
                 <div class="product_list" data-product></div>
             </div>
         </section>
@@ -88,7 +60,7 @@
         </div>
     </footer>
     <span class="rodapie">Desarrollado por Silvana A - 2023 </span>
-    
+    <button id="verConsolasBtn" style="display: none;"></button>
     <script src="controllers/productos-controllers.js" type="module"></script>
 
 </body>

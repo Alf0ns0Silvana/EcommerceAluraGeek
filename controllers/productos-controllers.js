@@ -8,7 +8,6 @@ const nuevoProducto = (name,imageUrl,price, id) => {
    <span class="precio_producto">$${price}</span>
    <a class="link_detalles_producto" href="./index.html?id=${id}" >Ver producto</a>
 </div> ` 
-
     card.innerHTML = contenido
     card.dataset.id = id 
     return card
@@ -32,7 +31,7 @@ productosServicios.listaProductos()
   })
   .catch(error => console.log(error));
 
-/* Btn ver consolas */
+                                                    /* Btn ver consolas */
 
 const verConsolasBtn = document.getElementById("verConsolasBtn");
 const starWarsSection = document.getElementById("star_wars");
@@ -45,7 +44,7 @@ verConsolasBtn.addEventListener("click", () => {
   consolasSection.style.display = "block";
 });
 
-/* Validacion form_consultas */
+                                                    /* Validacion form_consultas */
 
 const formConsultas = document.querySelector('.form_consultas');
 const inputNombre = formConsultas.querySelector('input[type="text"]');
@@ -119,7 +118,7 @@ function showSuccess(element) {
   }, 10000);
 }
 
-/* validar form inicio sesion */
+                                                    /* Form inicio sesion */
 
 let user = document.getElementById('usuario');
 let pass = document.getElementById('password');
@@ -152,7 +151,7 @@ form.addEventListener('submit', async function(evt) {
         if (authenticated) {
             try {
             await new Promise(resolve => setTimeout(resolve, 1000));
-            window.location.href = 'index.html';
+            window.location.href = 'all_products.html';
             } catch (error) {
             console.error('Error en la autenticación:', error);
             }

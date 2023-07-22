@@ -117,7 +117,7 @@ header{
     line-height: 25.83px;
 }
 
-                                        /* Main */
+                                        /* Main home */
 
 main{
     padding: 0px 50px;
@@ -209,7 +209,14 @@ section{
     display: flex;
     align-items: center;
 }
+.contenedor_header_all{
+    width: 90%;
+    gap: 32px;
+    display: flex;
+    align-items: center;
+}
 .main_admin{
+    margin-top: 15px;
     width: 100%;
     background-color: #F5F5F5;
     padding: 60px;
@@ -223,8 +230,9 @@ section{
     gap: 17px;
 }
 .title_form_admin{
+    height: 38px;
     color: #464646;
-    font-size: 18px;
+    font-size: 32px;
     font-weight: 700;
 }
 .form_admin>input{
@@ -261,8 +269,30 @@ section{
     font-size: 15px;
 }
 
+                                        /* Section add new products */
 
-                                        /* Messajes formulario de consulta */
+.new_product{
+    display: flex;
+    gap: 16px;
+    width: auto;
+    height: 491px;
+    flex-direction: column;
+    align-items: center;
+}
+.new_product>input{
+    height: 56px;
+    width: 560px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 0px 5px;
+}
+.new_product input:nth-last-of-type(2){
+    height: 82px;
+}
+
+
+                                        /* Mssjs formulario de consulta */
 .error-message {
     color: red;
     font-size: 13px;
@@ -348,6 +378,10 @@ section{
     font-size: 16px;
     line-height: 18.78px;
     font-weight: 400;
+}
+.form_btn a{
+    color: #fff;
+    text-decoration: none;
 }
 .rodapie{
     display: flex;
