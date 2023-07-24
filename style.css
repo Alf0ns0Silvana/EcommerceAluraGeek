@@ -154,6 +154,7 @@ section{
     flex-wrap: wrap;
 }
 .producto{
+    position: relative;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -199,6 +200,18 @@ section{
     color: #2A7AE4;
     height: 19px;
     width: 100px; 
+}
+.product_buttons {
+    position: absolute;
+    top: 10px; 
+    left: 112px; 
+    z-index: 1; 
+}
+.edit_button,
+.delete_button {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
 }
 
                                         /* Main admin */

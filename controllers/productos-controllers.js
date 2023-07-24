@@ -1,8 +1,12 @@
 import { productosServicios } from '../servicios/productos-servicios.js';
 
-const nuevoProducto = (name,imageUrl,price, id) => { 
+const nuevoProducto = (name,imageUrl,price,id) => { 
    let card = document.createElement("div") 
    let contenido =  `<div class="producto"> 
+   <div class="product_buttons" style="display: ${isAdminLoggedIn ? 'block' : 'none'};">
+   <img src="Imgs/btn_delete.png" alt="Editar producto" class="edit_button">
+   <img src="Imgs/btn_edit.png" alt="Eliminar producto" class="delete_button">
+ </div>
    <img class="img_producto" src="${imageUrl}" alt="Foto del producto">
    <h3 class="title_producto">${name}</h3>
    <span class="precio_producto">$${price}</span>
@@ -27,7 +31,7 @@ productosServicios.listaProductos()
         const card = nuevoProducto(name, imageUrl, price, id);
         section.appendChild(card);
       });
-    });
+    }); 
   })
   .catch(error => console.log(error));
 
@@ -147,19 +151,19 @@ form.addEventListener('submit', async function(evt) {
     }
     failLogin.innerHTML = msjFail.join('. ');
     if (msjFail.length === 0) {
-      const authenticated = authenticateUser(email, password);
+        const authenticated = authenticateUser(email, password);
         if (authenticated) {
-            try {
+          try {
             await new Promise(resolve => setTimeout(resolve, 1000));
             window.location.href = 'all_products.html';
-            } catch (error) {
+          } catch (error) {
             console.error('Error en la autenticación:', error);
-            }
+          }
         } else {
-            failLogin.textContent = 'Incorrecto. Por favor, verifica tu correo electrónico y contraseña.';
-        } 
-      setTimeout(() => {
-        failLogin.innerHTML = '';
-      }, 5000);
-    }
-});
+          failLogin.textContent = 'Incorrecto. Por favor, verifica tu correo electrónico y contraseña.';
+        }
+        setTimeout(() => {
+          failLogin.innerHTML = '';
+        }, 5000);
+      }
+    });
