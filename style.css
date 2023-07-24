@@ -288,23 +288,59 @@ section{
     display: flex;
     gap: 16px;
     width: auto;
-    height: 491px;
+    height: 530px;
     flex-direction: column;
     align-items: center;
 }
+.container_files{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.drag_area{
+    display: flex;
+    height: 140px;
+    text-align: center;
+    width: 275px;
+    border: 3px dashed #ddd;
+    align-items: center;
+}
+.text_drag_area{
+    font-size: 13px;
+    font-weight: 200;
+    padding: 25px;
+}
+.btn_file{
+    padding: 10px;
+    width: 222px;
+    background-color: transparent;
+    border: 1px solid #2A7AE4;
+    border-color: #2A7AE4;
+    color: #2A7AE4;
+}
 .new_product>input{
+    position: relative;
     height: 56px;
     width: 560px;
     border: none;
     border-radius: 4px;
     outline: none;
-    padding: 0px 5px;
+    padding: 0px 10px;
+    font-size: 14px;
 }
 .new_product input:nth-last-of-type(2){
     height: 82px;
 }
-
-
+.new_product input:nth-last-of-type(2)::placeholder{
+    bottom: 58px;
+}
+.new_product>input::placeholder {
+    font-size: 14px;
+    position: absolute;
+    bottom: 35px;
+    left: 10px;
+    line-height: 18.78px;
+}
                                         /* Mssjs formulario de consulta */
 .error-message {
     color: red;

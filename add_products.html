@@ -30,8 +30,14 @@
     <main class="main_admin">
         <div class="new_product">
             <h2 class="title_form_admin">Agregar nuevo producto</h2>
-            <input type="url" placeholder="Url de la imagen">
-            <input type="text" placeholder="Categoría">
+            <div class="container_files">
+                <div class="drag_area">
+                    <h3 class="text_drag_area">Arrastre para agregar una imagen para el producto</h3>
+                </div>
+                <span>Ó</span>
+                <button class="btn_file">Busque en su computador</button>
+                <input type="file" id="input-file"  hidden>
+            </div>
             <input type="text" placeholder="Nombre del producto">
             <input type="text" placeholder="Precio del producto">
             <input type="text" placeholder="Descripción del producto">
