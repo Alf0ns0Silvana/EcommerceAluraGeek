@@ -165,6 +165,5 @@ form.addEventListener('submit', async function(evt) {
         setTimeout(() => {
           failLogin.innerHTML = '';
         }, 5000);
-      }
-    });
-/*  */
+    }
+});    

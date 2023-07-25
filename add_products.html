@@ -30,14 +30,13 @@
     <main class="main_admin">
         <div class="new_product">
             <h2 class="title_form_admin">Agregar nuevo producto</h2>
-            <div class="container_files">
-                <div class="drag_area">
-                    <h3 class="text_drag_area">Arrastre para agregar una imagen para el producto</h3>
-                </div>
+            <div class="drag-area">
+                <h3 class="text_drag_area"><img src="Imgs/carga_imagen.png" class="carga-img">Arrastre para agregar una imagen para el producto</h3>
                 <span>Ó</span>
-                <button class="btn_file">Busque en su computador</button>
-                <input type="file" id="input-file"  hidden>
+                <label for="input-file" class="btn_file">Busque en su computador</label>
+                <input type="file" id="input-file" hidden multiple>
             </div>
+            <div id="preview"></div>
             <input type="text" placeholder="Nombre del producto">
             <input type="text" placeholder="Precio del producto">
             <input type="text" placeholder="Descripción del producto">
@@ -71,6 +70,7 @@
     <span class="rodapie">Desarrollado por Silvana A - 2023 </span>
     <button id="verConsolasBtn" style="display: none;"></button>
     <script src="controllers/productos-controllers.js" type="module"></script>
+    <script src="controllers/add-product.js"></script>
 
 </body>
 

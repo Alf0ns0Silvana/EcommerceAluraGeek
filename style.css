@@ -292,32 +292,61 @@ section{
     flex-direction: column;
     align-items: center;
 }
-.container_files{
+.drag-area{
     display: flex;
-    align-items: center;
-    gap: 25px;
-}
-.drag_area{
-    display: flex;
-    height: 140px;
+    height: 130px;
+    gap: 10px;
     text-align: center;
-    width: 275px;
-    border: 3px dashed #ddd;
+    width: 50%;
     align-items: center;
 }
 .text_drag_area{
-    font-size: 13px;
+    display: flex;
+    background: #fff;
+    width: 300px;
+    height: 135px;
+    font-size: 0.8rem;
     font-weight: 200;
-    padding: 25px;
+    padding: 5px;
+    color: rgb(134, 134, 134);
+    border: 3px dashed #ddd;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.carga-img{
+    padding: 5px;
+    width: 30px;
+    height: 30px;
 }
 .btn_file{
-    padding: 10px;
-    width: 222px;
+    padding: 12px;
+    width: 280px;
     background-color: transparent;
     border: 1px solid #2A7AE4;
     border-color: #2A7AE4;
     color: #2A7AE4;
 }
+.file_container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+#preview{
+    margin-top: 10px;
+}
+.status-text{
+    padding: 0 10px;
+}
+.success{
+    color: #52ad5a;
+}
+.failure{
+    color: #ff0000;
+}
+
 .new_product>input{
     position: relative;
     height: 56px;
@@ -341,7 +370,9 @@ section{
     left: 10px;
     line-height: 18.78px;
 }
+
                                         /* Mssjs formulario de consulta */
+
 .error-message {
     color: red;
     font-size: 13px;
