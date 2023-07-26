@@ -130,7 +130,7 @@ let failLogin = document.getElementById('fail');
 
 const validUsers = [
     { email: 'user@gmail.com', password: '123456' }
-  ];
+  ]; /* simulacion usuario */
   function authenticateUser(email, password) {
     return validUsers.some(user => user.email === email && user.password === password);
   }
@@ -167,3 +167,5 @@ form.addEventListener('submit', async function(evt) {
         }, 5000);
     }
 });    
+
+/* Añadir_producto */

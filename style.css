@@ -288,7 +288,6 @@ section{
     display: flex;
     gap: 16px;
     width: auto;
-    height: 530px;
     flex-direction: column;
     align-items: center;
 }
@@ -358,10 +357,10 @@ section{
     font-size: 14px;
 }
 .new_product input:nth-last-of-type(2){
-    height: 82px;
+    height: 68px;
 }
 .new_product input:nth-last-of-type(2)::placeholder{
-    bottom: 58px;
+    bottom: 45px;
 }
 .new_product>input::placeholder {
     font-size: 14px;
