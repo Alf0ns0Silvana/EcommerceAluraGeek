@@ -1,22 +1,21 @@
 import { productosServicios } from '../servicios/productos-servicios.js';
 
-const nuevoProducto = (name,imageUrl,price,id) => { 
-   let card = document.createElement("div") 
-   let contenido =  `<div class="producto"> 
-   <div class="product_buttons" style="display: ${isAdminLoggedIn ? 'block' : 'none'};">
-   <img src="Imgs/btn_delete.png" alt="Editar producto" class="edit_button">
-   <img src="Imgs/btn_edit.png" alt="Eliminar producto" class="delete_button">
- </div>
-   <img class="img_producto" src="${imageUrl}" alt="Foto del producto">
-   <h3 class="title_producto">${name}</h3>
-   <span class="precio_producto">$${price}</span>
-   <a class="link_detalles_producto" href="./index.html?id=${id}" >Ver producto</a>
+const nuevoProducto = (name, imageUrl, price, id) => { 
+  let card = document.createElement("div") 
+  let contenido =  `<div class="producto"> 
+  <div class="product_buttons" style="display: ${isAdminLoggedIn ? 'block' : 'none'};">
+  <img src="Imgs/btn_delete.png" alt="Editar producto" class="edit_button">
+  <img src="Imgs/btn_edit.png" alt="Eliminar producto" class="delete_button">
+</div>
+  <img class="img_producto" src="${imageUrl}" alt="Foto del producto">
+  <h3 class="title_producto">${name}</h3>
+  <span class="precio_producto">$${price}</span>
+  <a class="link_detalles_producto" href="./index.html?id=${id}" >Ver producto</a>
 </div> ` 
-    card.innerHTML = contenido
-    card.dataset.id = id 
-    return card
+  card.innerHTML = contenido
+  card.dataset.id = id 
+  return card
 }
-
 const productos = document.querySelector("[data-product]")
 
 productosServicios.listaProductos()
@@ -35,6 +34,7 @@ productosServicios.listaProductos()
   })
   .catch(error => console.log(error));
 
+  export { data, nuevoProducto };
                                                     /* Btn ver consolas */
 
 const verConsolasBtn = document.getElementById("verConsolasBtn");
@@ -168,4 +168,3 @@ form.addEventListener('submit', async function(evt) {
     }
 });    
 
-/* Añadir_producto */

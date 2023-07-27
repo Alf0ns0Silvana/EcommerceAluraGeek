@@ -1,3 +1,4 @@
+
 const dropArea = document.querySelector(".drag-area");
 const dropText = document.querySelector(".text_drag_area");
 const button = dropArea.querySelector("label[for='input-file']");
@@ -125,10 +126,32 @@ descripcionInput.addEventListener('input', () => {
   validateDescripcionInput();
 });
 
-formBtn.addEventListener('click', (event) => {
+formBtn.addEventListener('click', async (event) => {
   event.preventDefault();
   if (isFormValid()) {
-    console.log('El formulario está completo. Se puede agregar el producto.');
+    const formData = new FormData();
+    formData.append('name', nombreInput.value.trim());
+    formData.append('price', precioInput.value.trim());
+    formData.append('description', descripcionInput.value.trim());
+    formData.append('image', imgInput.files[0]);
+    try {
+      const response = await fetch('http://localhost:3000/producto', {
+        method: 'POST',
+        body: formData,
+      });
+      if (response.ok) {
+        const product = await response.json();
+        data.push(product);
+        const newProductCard = nuevoProducto(product.name, product.imageUrl, product.price, product.id);
+        const consolasSection = document.getElementById("consolas");
+        consolasSection.appendChild(newProductCard);
+        window.location.href = 'all_products.html';
+      } else {
+        console.error('Error al agregar el producto:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error en la solicitud al servidor:', error);
+    }  event.preventDefault();
   }
 });
 
