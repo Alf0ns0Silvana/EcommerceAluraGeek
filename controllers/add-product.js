@@ -79,7 +79,7 @@ function ProcessFile(file) {
     reader.readAsDataURL(file);
   }
 
-/* Validacion add product */
+/* Validacion form add product */
 
 const imgProduct = document.getElementById("file-img");
 const imgInput = document.getElementById("input-file");
@@ -100,6 +100,21 @@ imgInput.addEventListener('change', () => {
 imgProduct.addEventListener('input', () => {
     validateimgProduct();
 })
+
+imgProduct.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  hideError(imageError);
+});
+
+imgProduct.addEventListener('drop', (e) => {
+  e.preventDefault();
+  const file = e.dataTransfer.files[0];
+  if (file) {
+    imgInput.files = e.dataTransfer.files;
+    validateimgProduct();
+  }
+});
+
 nombreInput.addEventListener('input', () => {
   validateNombreInput();
 });
@@ -113,30 +128,25 @@ descripcionInput.addEventListener('input', () => {
 formBtn.addEventListener('click', (event) => {
   event.preventDefault();
   if (isFormValid()) {
-    console.log('El formulario está completo y válido. Se puede agregar el producto.');
+    console.log('El formulario está completo. Se puede agregar el producto.');
   }
 });
+
+let isImageValid = false;
 
 function validateimgProduct() {
     const files = imgInput.files;
     if (!files || files.length === 0) {
       showError(imageError, 'Debe agregar una imagen para el producto.');
+      isImageValid = false;
     } else {
       hideError(imageError);
+      isImageValid = true;
     }
 }
 const btnFile = document.querySelector('.btn_file');
 btnFile.addEventListener('click', () => {
   hideError(imageError);
-});
-imgProduct.addEventListener('dragover', (e) => {
-  e.preventDefault();
-  hideError(imageError);
-});
-
-imgProduct.addEventListener('drop', (e) => {
-  e.preventDefault();
-  validateimgProduct();
 });
 
 function validateNombreInput() {
@@ -174,7 +184,7 @@ function isFormValid() {
   validatePrecioInput();
   validateDescripcionInput();
 
-  if (imagenNproduct.textContent || nameErrorNproduct.textContent || priceErrorNproduct.textContent || descripcionErrorNproduct.textContent) {
+  if (!isImageValid || imagenNproduct.textContent || nameErrorNproduct.textContent || priceErrorNproduct.textContent || descripcionErrorNproduct.textContent) {
     isValid = false;
   }
   return isValid;
@@ -187,7 +197,7 @@ function hideError(element) {
   element.style.display = 'none';
 } 
 
-/* Input $ */
+/* Input $price */
 
   precioInput.addEventListener('keydown', (event) => {
     const { key, target } = event;
