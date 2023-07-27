@@ -142,9 +142,6 @@ formBtn.addEventListener('click', async (event) => {
       if (response.ok) {
         const product = await response.json();
         data.push(product);
-        const newProductCard = nuevoProducto(product.name, product.imageUrl, product.price, product.id);
-        const consolasSection = document.getElementById("consolas");
-        consolasSection.appendChild(newProductCard);
         window.location.href = 'all_products.html';
       } else {
         console.error('Error al agregar el producto:', response.statusText);
@@ -155,6 +152,8 @@ formBtn.addEventListener('click', async (event) => {
   }
 });
 
+ /* Error, envia los values undefined - corregir */
+ 
 let isImageValid = false;
 
 function validateimgProduct() {

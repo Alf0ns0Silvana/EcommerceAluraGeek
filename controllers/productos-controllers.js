@@ -33,9 +33,8 @@ productosServicios.listaProductos()
     }); 
   })
   .catch(error => console.log(error));
-
-  export { data, nuevoProducto };
-                                                    /* Btn ver consolas */
+  
+  /* Btn ver consolas */
 
 const verConsolasBtn = document.getElementById("verConsolasBtn");
 const starWarsSection = document.getElementById("star_wars");
